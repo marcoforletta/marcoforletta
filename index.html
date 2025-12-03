@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +10,7 @@
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.js"></script>
   <bibtex src="publications.bib"></bibtex>
-  
+
   <style>
     body {
       font-family: Helvetica, sans-serif;
@@ -19,45 +20,73 @@
       background-color: #fdfdfd;
       color: #1a1a1a;
     }
+
     a {
       color: inherit;
       text-decoration: none;
     }
+
     a:hover {
       opacity: 0.8;
     }
-    h1, h2 {
+
+    h1,
+    h2 {
       color: #003299;
     }
+
     nav {
       margin-bottom: 30px;
     }
+
     nav a {
       margin-right: 15px;
       text-decoration: none;
       color: #003299;
     }
+
     section {
       margin-bottom: 40px;
     }
+
     .about-flex {
       display: flex;
-      gap: 60px;
+      flex-direction: row;
       align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
     }
-    .about-text {
-      flex: 1.618;
-    }
+
     .about-img {
+      flex: 0 0 300px;
+    }
+
+    .about-text {
       flex: 1;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-start;
     }
-    .about-img img {
-      max-width: 240px;
-      height: auto;
+
+    img#profile-pic {
+      width: 100%;
+      border-radius: 4px;
+      display: block;
     }
+
+    @media (max-width: 768px) {
+      .about-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .about-img {
+        width: 50%;
+      }
+
+      .about-text {
+        text-align: justify;
+      }
+    }
+
     .footer {
       font-size: 0.9em;
       color: #e6e6e6;
@@ -67,11 +96,14 @@
     }
   </style>
 </head>
+
 <body>
-  
+
   <h1>Marco Forletta</h1>
   <p style="color:#003299"><strong>Economist</strong><br>
-  <a href="https://www.ecb.europa.eu/pub/research/authors/profiles/marco-forletta.en.html"> European Central Bank </a> | <a href="mailto:marco.forletta@ecb.europa.eu">Email</a> | <a href="cv_oct25.pdf">CV</a></p>
+    <a href="https://www.ecb.europa.eu/pub/research/authors/profiles/marco-forletta.en.html"> European Central Bank </a>
+    | <a href="mailto:marco.forletta@ecb.europa.eu">Email</a> | <a href="cv_oct25.pdf">CV</a>
+  </p>
 
   <nav>
     <a href="#about">About</a>
@@ -84,34 +116,38 @@
     <h2>About</h2>
     <div class="about-flex">
       <div class="about-text">
-        <p>Marco Forletta is a Financial Stability Expert at the European Central Bank. He is a PhD candidate in Banking and Finance at Bangor Business School and has master's degrees from the Toulouse School of Economics and Bocconi University. He works in the field of financial economics, banking, macroprudential policy, financial stability, and stress test modelling.</p>
+        <p>Marco Forletta is a Financial Stability Expert at the European Central Bank. He is a PhD candidate in Banking
+          and Finance at Bangor Business School and has master's degrees from the Toulouse School of Economics and
+          Bocconi University. He works in the field of financial economics, banking, macroprudential policy, financial
+          stability, and stress test modelling.</p>
       </div>
       <div class="about-img">
-        <img src="pic.jpg" alt="Marco Forletta">
+        <img id="profile-pic" loading="lazy" src="pic.jpg" alt="Marco Forletta">
       </div>
+      <p></p>
+      <p style="font-variant: small-caps;text-align: justify;">DISCLAIMER: The views expressed on this website and in
+        any of the papers are those of the author and do not necessarily reflect those of the European Central Bank.</p>
     </div>
-    <p></p>
-    <p style="font-variant: small-caps;text-align: justify;">DISCLAIMER: The views expressed on this website and in any of the papers are those of the author and do not necessarily reflect those of the European Central Bank.</p>
   </section>
-  
+
   <div class="bibtex_template">
-      <div class="if title" style="font-weight: bold;">
-        <span class="if url">
-          <a class="url">
-            <span class="title"></span>
-          </a>
-        </span>
-      </div>
-      <div style="margin-left: 10px; margin-bottom:5px;">
-          with <span class="author"></span>, 
-          <span class="year"></span>, 
-          <span class="if journal"><span class="journal" style="font-style: italic;"></span></span>
-          <span class="if !journal"><span class="type" style="font-style: italic;"></span></span>
-      </div>
+    <div class="if title" style="font-weight: bold;">
+      <span class="if url">
+        <a class="url">
+          <span class="title"></span>
+        </a>
+      </span>
+    </div>
+    <div style="margin-left: 10px; margin-bottom:5px;">
+      with <span class="author"></span>,
+      <span class="year"></span>,
+      <span class="if journal"><span class="journal" style="font-style: italic;"></span></span>
+      <span class="if !journal"><span class="type" style="font-style: italic;"></span></span>
+    </div>
   </div>
-  
+
   <section id="research">
-    <h2>Research</h2>    
+    <h2>Research</h2>
     <div class="bibtex_display" bibtextypekey="ARTICLE"></div>
   </section>
 
@@ -126,8 +162,10 @@
   </section>
 
   <div class="footer">
-    <a class="url" href="https://orcid.org/0009-0007-4551-0986">ORCiD 0009-0007-4551-0986</a> | &copy; 2025 Marco Forletta. Last updated: August 2025.
+    <a class="url" href="https://orcid.org/0009-0007-4551-0986">ORCiD 0009-0007-4551-0986</a> | &copy; 2025 Marco
+    Forletta. Last updated: August 2025.
   </div>
 
 </body>
+
 </html>
